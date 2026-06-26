@@ -11,11 +11,18 @@
     "dev": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "rm -rf dist && cd ../part1 && npm run build && cp -r dist ../part3/",
-    "deploy:ui": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:ui": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "lint": "eslint . --fix"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mongoose": "^9.7.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.5.0",
+    "globals": "^17.7.0"
   }
 }
